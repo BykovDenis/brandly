@@ -1,8 +1,57 @@
 <!DOCTYPE html>
 html
-  head        
-    title fdfd
+  head     
+    meta(charset="utf-8")
+    title BRAND LY
     link(href="css/normalize.css" rel="stylesheet")
     link(href="css/style.css" rel="stylesheet")
   body      
-    div 12355
+    header.clearfix
+        div.slider        
+            img(src="img/img_woman.jpg" width="1920" height="932")
+            div.slider__layout
+                div.slider__header.clearfix                
+                    p  Spring / Summer Collection
+                    h1 UP TO 60% DISCOUNT ON NEW ARRIVALS
+                    p  TRENDING NEW ITEMS,FROM CREATORS AROUND THE WORLD
+
+                    a(href="").btn--header shop now
+
+                    ul.controls
+                        li
+                            div.controls__item
+                        li
+                            div.controls__item
+                        li
+                            div.controls__item--active
+                        li
+                            div.controls__item
+
+                    
+                    
+        nav.header
+            div.header__layout.clearfix
+                div.header__logo
+                    span BRAND
+                    span LY
+
+                -list = ["Home", "Shop", "Brands", "Blog", "About", "Contact"]
+
+                ul.header__main-menu
+
+                    each element in list
+
+                        li
+
+                            a(href="#") #{element}
+        main
+            section.latest
+                div.latest__layout
+                    h2.latest__header Latest Products
+                    div.latest__collection
+                        div.collection
+                            
+                        
+                
+            
+                

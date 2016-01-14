@@ -1,7 +1,262 @@
 @import "variables.less";
 
-.body{
+@font-face {
     
-    wdth: @width-body;
+    font-family: "BebasNeueRegular";
+    src: url("../fonts/BebasNeue-Regular.otf");
+    font-weight: normal;
+    font-style: normal;   
+    
+}
+
+@font-face{
+    
+    font-family: "BebasNeueBook";
+    src: url("../fonts/BebasNeue-Book.otf");
+    font-weight: normal;
+    font-style: normal;
+    
+}
+
+@font-face{
+    
+    font-family: "LatoBlack";
+    src: url("../fonts/Lato-Black.ttf");
+    font-weight: normal;
+    font-style: normal;
+    
+}
+
+body{
+    
+    width: @width-body;
+    
+}
+
+
+.slider{
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+    width: 1920px;
+    height: 932px;   
+    
+    text-transform: uppercase;
+    background-color: rgba(34, 37, 51, .4);
+    /*z-index: -2;*/
+
+    
+    img{
+        
+        position: absolute;        
+        z-index: -1;
+        filter: grayscale(50%);           
+
+    }
+    
+    &__layout{
+        
+        width: 1195px;
+        margin: 0 auto;
+        
+    }
+    
+    &__header{            
+        
+        margin: 315px 0;
+        color: @color-white;
+        
+        text-align: center;
+        
+        h1{
+            
+            font: 800 @font-size-h1 / @line-height @font-family-latoblack;
+            margin: 65px 0;
+            
+        }
+        
+        p{
+                        
+            font: 100 30px / @line-height @font-family-opensans;               
+            
+        }
+        
+        p:first-of-type{
+            
+            letter-spacing: 0.3em;            
+            
+        }
+        
+    }
+    
+}
+
+.header{
+    
+    &__layout{
+    
+        margin: 0 auto;
+        width: 1170px;
+    
+    }
+    
+    &__logo{
+        
+        float: left;
+        color: red;
+        
+        padding: 35px 0;
+        
+        text-transform: uppercase;
+        
+        span:first-of-type{
+            
+            font: 400 @font-size-logo/@line-height @font-family-bebasneue-regular;
+            
+        }
+        
+        span:last-of-type{
+            
+            font: 400 36px/@line-height @font-family-bebasneue-regular;
+            padding-left: 7px;
+            
+            
+        }       
+
+        
+    }  
+    
+    &__main-menu {
+        
+        float: right;
+        list-style-type: none;
+        text-align: right;
+        z-index: 200;
+        position: relative;
+        
+        li{
+            
+            display: inline-block;
+            vertical-align: middle;
+            padding: 19.5px 0;
+            margin-right: 77px;
+            
+            
+        }
+        
+        li:last-of-type{
+            
+            margin-right: 0;
+            
+        }
+        
+        a{
+            
+            color: @color-white;
+            text-decoration: none;
+            
+            font: 400 @font-size-link/@line-height @font-family-opensans;
+            
+        }
+        
+        a:hover{
+            
+            color: @color-red;
+            text-decoration: underline;
+            
+        }
+        
+    }
+}
+
+.btn{
+    
+    &--header{
+        
+        display: inline-block;
+        vertical-align: top;
+        margin-top: 26px;        
+        margin-bottom: 221px;
+        
+        padding: 19px 50px;
+        
+        border: 2px solid @color-white;
+        border-radius: 2px;
+        
+        color: @color-white;
+        text-align: center;
+        
+        text-decoration: none;
+        font: 800  @font-size/@line-height @font-family-latoblack;           
+        
+    }
+    
+    &--header:hover{
+        
+        color: @color-red;
+        border: 2px solid @color-red;
+        
+    }    
+    
+}
+
+.controls{
+    
+    list-style-type: none;
+    padding: 0;
+
+    
+    & li{
+    
+        display: inline-block;
+        vertical-align: top;
+        
+        margin-right: 5px;
+        
+    }
+    
+    & li:nth-of-type(2),
+    & li:nth-of-type(3){
+        
+        margin-right: 6px;
+        
+    }
+    
+    & li:last-of-type{
+        
+        margin-right: 0;
+        
+    }
+    
+    &__item{
+        
+        display: inline-block;
+        vertical-align: middle;
+        
+        width: 8px;
+        height: 8px;
+        border: 2px solid @color-white;
+        border-radius: 50%;
+        background-color: @color-white;
+        
+        
+    } 
+    
+    
+    &__item--active{
+        
+        display: inline-block;
+        vertical-align: middle;
+        
+        width: 10px;
+        height: 10px;
+        border: 3px solid @color-white;
+        border-radius: 50%;
+        
+        
+        
+    }
     
 }
